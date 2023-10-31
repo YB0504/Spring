@@ -1,7 +1,4 @@
 INDEX VERSION 1.4+C:\Users\Yeo InBeom\Spring\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-1613286339.index
-2114153721.index
-3914256159.index
-1613286339.index
 661600371.index
 3832740093.index
+3914256159.index
