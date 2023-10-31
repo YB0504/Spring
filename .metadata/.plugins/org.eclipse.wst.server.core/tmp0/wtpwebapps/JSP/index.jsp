@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	되나?
+	되나?<br>
+	git 레퍼지토리 연동 확인
 </body>
 </html>

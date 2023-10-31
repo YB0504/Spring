@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- 구현 클래스가 2개이기 때문에 bean객체도 비레해서 늘어난다. -->
+	<bean id="mb" class="sample09.MessageBeanImpl">
+		<property name="name" value="홍길동"></property>
+		<property name="greet" value="Hello !"></property>
+		
+		<!-- ref속성은 다른 bean값을 참조한 값을 주입할 때 쓰인다. -->
+		<!-- 다른 bean의 id값이 ref값에 들어간다. -->
+		<!-- 해당 id값의 bean에서 생성된 객체를 주입한다는 의미 -->
+		<property name="output" ref="out"></property>
+	</bean>
+	
+	<!-- 여기서 만들어진 객체가 ref의 값으로 주입된다. -->
+	<bean id="out" class="sample09.FileOutputer">
+		<property name="fileName" value="test.txt"></property>
+	</bean>
+	
+</beans>

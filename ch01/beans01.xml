@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- MessageBeanKr mb = new MessageBeanKr() -->
+	<!-- 객체 생성 : 메인메소드에서 bean의 id값을 불러올 때 객체가 생성된다. -->
+	<!-- 자동으로 실행되지 않기 떄문에 메인메소드 안에서 호출하여 실행해야 한다. -->
+	<bean id="mb" class="sample03.MessageBeanKr" name="a"></bean>
+
+	<!-- Constructor DI -->
+	<!-- 생성자를 호출하면서 값을 주입(injection)한다 -->
+	<bean id="mb2" class="sample04.MessageBeanImpl">
+		<!-- 생성자의 매개변수의 순서대로 값을 주입한다. -->
+		<constructor-arg value="도깨비">
+			<!-- <value>박보검</value> -->
+		</constructor-arg>
+		<constructor-arg value="안뇽">
+			<!-- <value>Hello</value> -->
+		</constructor-arg>
+	</bean>
+
+</beans>

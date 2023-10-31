@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Setter DI -->
+	<bean id="mb" class="sample07.MesageBeanImpl">
+		<!-- setter메소드에 설정된 각각의 매개변수에 값을 주입 -->
+		<!-- 값을 주입할 setter메소드의 매개변수와 name속성 값을 필드명과 일치시켜야 한다. -->
+		<property name="name">
+			<value>길동</value>
+		</property>
+		<property name="greet" value="안녕" />
+	</bean>
+
+</beans>
