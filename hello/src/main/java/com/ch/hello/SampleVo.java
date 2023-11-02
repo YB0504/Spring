@@ -29,7 +29,7 @@ public class SampleVo {
 		this.lastName = lastName;
 	}
 	/*
-	 * public String toString() { return
-	 * "SampleVosuper[나이:"+mno+", 성:"+firstName+ ", 이름:"+lastName+"]"; }
+	 * public String toString() { 
+	 * return "SampleVosuper[나이:"+mno+", 성:"+firstName+ ", 이름:"+lastName+"]"; }
 	 */
 }

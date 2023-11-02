@@ -82,6 +82,7 @@
 		</dependency>
 
 		<!-- jackson : JSON형태의 데이터를 주고 받을때 사용하는 라이브러리 -->
+		<!-- DTO객체나 List를 JSON형태로 변환할 때 쓰인다. -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
