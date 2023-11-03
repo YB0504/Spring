@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
 <aop-project name="hello"/>
+<aop-project name="myBatis1"/>
+<aop-project name="myBatis2"/>
 <aop-project name="springtest"/>
 <aop-project name="ch01"/>
+<aop-project name="ch07"/>
 </aop-reference-model>

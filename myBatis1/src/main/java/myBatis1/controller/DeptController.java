@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import myBatis1.model.Dept;
 import myBatis1.service.DeptService;
@@ -23,8 +24,9 @@ public class DeptController {
 		return "deptList";
 	}
 
+	// 부서 상세정보
 	@RequestMapping("deptView.do")
-	public String deptView(int deptno, Model model) {
+	public String deptView(@RequestParam("deptno") int deptno, Model model) {
 		Dept dept = ds.select(deptno);
 		model.addAttribute("dept", dept);
 		return "deptView";

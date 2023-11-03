@@ -11,6 +11,7 @@
 <!-- deptList.do 요청한 결과 페이지(deptList.jsp)의 table태그만 불러옴 -->
 <script type="text/javascript">
 	$(function() {
+		// ajax의 load() 사용
 		$('#list').load("deptList.do table");
 	});
 </script>
