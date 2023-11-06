@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="boardns">
+	
+	<!-- 글작성 -->
+	<insert id="insert" parameterType="board">
+		insert into myboard values(myboard_seq.nextval, #{writer}, #{passwd},
+		#{subject}, #{content}, 0, sysdate)
+	</insert>
+	
+	<!-- 총 데이터 개수 -->
+	<select id="count" resultType="int">
+		select count(*) from myboard
+	</select>
+	
+	<!-- 게시판 목록 -->
+	<!-- <![CDATA[]]> 내부에 SQL문을 작성하면 부등호를 인식할 수 있다. -->
+	<select id="list" parameterType="int" resultType="board">
+		<![CDATA[
+		select * from (select rownum rnum, board.* from(
+		select * from myboard order by no desc) board)
+		where rnum >= ((#{page}-1) * 10 + 1) and rnum <= (#{page} * 10)
+		]]>
+	</select>
+	
+	
+	
+	
+	
+</mapper>
+
+
