@@ -25,4 +25,20 @@ public class BoardDao {
 	public List<Board> getBoardList(int page) {
 		return session.selectList("list", page);
 	}
+
+	public void getUpdateCount(int no) {
+		session.update("hit", no);
+	}
+
+	public Board getBoard(int no) {
+		return session.selectOne("content", no);
+	}
+
+	public int getUpdate(Board board) {
+		return session.update("update", board);
+	}
+
+	public int delete(int no) {
+		return session.delete("delete", no);
+	}
 }

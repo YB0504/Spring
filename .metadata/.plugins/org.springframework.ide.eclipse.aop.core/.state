@@ -4,6 +4,8 @@
 <aop-project name="spring"/>
 <aop-project name="myBatis1"/>
 <aop-project name="myBatis2"/>
+<aop-project name="myBatis3"/>
+<aop-project name="spring2"/>
 <aop-project name="springtest"/>
 <aop-project name="ch01"/>
 <aop-project name="ch07"/>
