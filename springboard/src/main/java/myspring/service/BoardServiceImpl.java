@@ -63,11 +63,14 @@ public class BoardServiceImpl implements BoardService{
 	/* 게시판 댓글 달기 */
 	public void reply_ok(BoardBean b) throws Exception {
 
+		// update SQL을 실행하는 DAO메소드
 		boardDao.refEdit(b); // 기존 댓글 board_re_seq값 1증가
-
-		b.setBoard_re_lev(b.getBoard_re_lev() + 1); // 부모보다 1증가된 값을 저장함
+		
+		// 댓글 작성하는 insert SQL을 위한 1 증가된 값을 미리 저장
+		b.setBoard_re_lev(b.getBoard_re_lev() + 1);
 		b.setBoard_re_seq(b.getBoard_re_seq() + 1);
 
+		// 댓글 작성하는 insert SQL을 실행하는 DAO메소드 
 		boardDao.boardReplyOk(b);
 	}
 

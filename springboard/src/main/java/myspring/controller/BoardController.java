@@ -37,7 +37,7 @@ public class BoardController {
 		return "board/board_write";
 	}
 
-	/* 게시판 저장 */
+	/* 게시판 작성 */
 	@RequestMapping(value = "/board_write_ok.do", method = RequestMethod.POST)
 	public String board_write_ok(@ModelAttribute BoardBean board) throws Exception {
 //	public String board_write_ok(@RequestParam HashMap board) throws Exception {
@@ -104,6 +104,7 @@ public class BoardController {
 		model.addAttribute("bcont", board);
 		model.addAttribute("page", page);
 
+		// state변수에 값에 따라 return받는 View페이지가 달라진다.
 		if (state.equals("cont")) {				// 내용보기
 			// String board_cont = board.getBoard_content().replace("\n","<br>");
 			// 글내용중 엔터키 친부분을 웹상에 보이게 할때 다음줄로 개행

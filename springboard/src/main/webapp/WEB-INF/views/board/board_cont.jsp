@@ -32,6 +32,8 @@
 			</tr>
 		</table>
 
+		<!-- state값을 전달하여 하나의 Controller클래스에서 
+		각각의 폼에 해당하는 View페이지로 포워딩할 수 있도록한다. -->
 		<div id="boardcont_menu">
 			<input type="button" value="수정" class="input_button"
 				onclick="location='board_cont.do?board_num=${bcont.board_num}&page=${page}&state=edit'" />
