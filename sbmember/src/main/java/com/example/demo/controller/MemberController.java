@@ -41,13 +41,13 @@ public class MemberController {
 	/* 로그인 폼 뷰 */
 	@RequestMapping(value = "/member_login.do")
 	public String member_login() {
-		return "member/member_login";     
+		return "member/member_login";   
 	}
 
 	/* 비번찾기 폼 */
 	@RequestMapping(value = "/pwd_find.do")
 	public String pwd_find() {
-		return "member/pwd_find";		
+		return "member/pwd_find";
 	}
 
 	/* 회원가입 폼 */
