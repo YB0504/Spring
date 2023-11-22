@@ -28,8 +28,8 @@ increment by 1 start with 1 nocache;
 
 insert into join_member (join_code,join_id,join_pwd,join_name,join_zip,
 join_addr1,join_addr2,join_tel,join_phone,join_email,join_regdate,join_state)
-values(join_member_joincode_seq.nextval,'aaaaa',
-'77777','홍길동','74512','서울시 마포구 대흥동','중앙정보 처리학원',
+values(join_member_joincode_seq.nextval,'test2',
+'77777','홍길둥','74512','서울시 마포구 대흥동','중앙정보 처리학원',
 '02-7777-7777','010-9999-9999','hong@naver.com',sysdate,1);
 
 
