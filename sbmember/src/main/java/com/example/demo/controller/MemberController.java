@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.model.MemberBean;
 import com.example.demo.service.MemberServiceImpl;
@@ -269,7 +270,7 @@ public class MemberController {
 		m.addAttribute("join_phone3", join_phone3);
 		m.addAttribute("join_mailid", join_mailid);
 		m.addAttribute("join_maildomain", join_maildomain);
-
+		
 		return "member/member_edit";
 	}
 
