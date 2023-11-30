@@ -76,6 +76,7 @@ public class BoardController {
 		if (endpage > maxpage)
 			endpage = maxpage;
 
+		// View에서 사용하기 위해 값 전달
 		model.addAttribute("page", page);
 		model.addAttribute("startpage", startpage);
 		model.addAttribute("endpage", endpage);
